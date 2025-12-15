@@ -121,6 +121,14 @@ def run_gift_store(initial_money):
         
         title = font_large.render("GIFT STORE", True, WHITE)
         screen.blit(title, (400 - title.get_width()//2, 30))
+
+        logo_image = pygame.image.load("kiffyhi.png")
+        logo_image = pygame.transform.scale(logo_image, (130, 130))
+        screen.blit(logo_image, (200, -20))
+
+        logo_image = pygame.image.load("kiffyhi.png")
+        logo_image = pygame.transform.scale(logo_image, (130, 130))
+        screen.blit(logo_image, (480, -20))
         
         money_text = font_medium.render(f"Budget: {money}", True, WHITE)
         screen.blit(money_text, (400 - money_text.get_width()//2, 60))
@@ -153,16 +161,17 @@ def run_gift_store(initial_money):
             price_text = font_small.render(f"{item['price']}", True, text_color)
             screen.blit(price_text, (rect.x + 75 - price_text.get_width()//2, rect.y + 40))
             
-            heart_points = [
-                (rect.x + 75, rect.y + 90),
-                (rect.x + 60, rect.y + 80),
-                (rect.x + 45, rect.y + 90),
-                (rect.x + 75, rect.y + 120),
-                (rect.x + 105, rect.y + 90),
-                (rect.x + 90, rect.y + 80),
-                (rect.x + 75, rect.y + 90)
-            ]
-            pygame.draw.polygon(screen, heart_color, heart_points)
+
+            kiffy_logo = pygame.image.load("gifts.png")
+            scaled_width = 100  # x+45 to x+105
+            scaled_height = 100  # y+80 to y+120
+            
+            kiffy_logo = pygame.transform.scale(kiffy_logo, (scaled_width, scaled_height))
+            
+            # Position at the heart's top-left corner (x+45, y+80)
+            screen.blit(kiffy_logo, (rect.x + 30, rect.y + 50))
+
+            
             
             # Change button text based on status
             if btn["bought"]:
