@@ -31,12 +31,12 @@ def show_alert(screen, message):
     
     screen.blit(alert_surf, (200, 250))
     pygame.display.flip()
-    pygame.time.wait(1000)
+    pygame.time.wait(700)
 
 def run_gift_store(initial_money):
     """Run gift store"""
     screen = pygame.display.set_mode((800, 600))
-    pygame.display.set_caption("Gift Store")
+    pygame.display.set_caption("Gift Store <3")
     clock = pygame.time.Clock()
     
     # Initialize fonts
@@ -46,12 +46,12 @@ def run_gift_store(initial_money):
     items_bought = []
     
     items = [
-        {"name": "Red Rose", "price": 200},
-        {"name": "Chocolate", "price": 150},
-        {"name": "Teddy Bear", "price": 250},
-        {"name": "Love Letter", "price": 100},
-        {"name": "Perfume", "price": 300},
-        {"name": "Jewelry", "price": 350}
+        {"name": "Love Letter", "price": 83},
+        {"name": "Chocolate", "price": 143},
+        {"name": "Single Rose", "price": 197},
+        {"name": "Teddy Bear", "price": 263},
+        {"name": "Perfume", "price": 337},
+        {"name": "Jewelry", "price": 421}
     ]
     
     item_buttons = []
