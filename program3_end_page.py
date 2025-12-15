@@ -23,7 +23,7 @@ def init_fonts():
 def show_result(result_type, message, budget, items_bought):
     """Show result page - returns 'menu' or 'exit'"""
     screen = pygame.display.set_mode((800, 600))
-    pygame.display.set_caption("Game Result")
+    pygame.display.set_caption("Game ResultS <3")
     clock = pygame.time.Clock()
     
     # Initialize fonts
