@@ -181,7 +181,7 @@ def show_menu():
         screen.blit(font_medium.render("Mechanics: ", True, RED), (100, 325))
         screen.blit(font_medium.render("1. Pick a card for your budget", True, WHITE), (100, 350))
         screen.blit(font_medium.render("2. Buy gifts for your valentine", True, WHITE), (100, 380))
-        screen.blit(font_medium.render("3. Don't spend outside your budget!", True, WHITE), (100, 410))
+        screen.blit(font_medium.render("3. Spend your budget accordingly and exactly", True, WHITE), (100, 410))
         
         start_color = LIGHT_PINK if start_hover else WHITE
         pygame.draw.rect(screen, start_color, start_rect, border_radius=15)
@@ -207,7 +207,7 @@ def run_card_selection():
     # Initialize fonts
     init_fonts()
     
-    budgets = [400, 500, 600]
+    budgets = [504, 767, 1021] 
     random.shuffle(budgets)
     
     global cards
