@@ -32,8 +32,8 @@ def show_result(result_type, message, budget, items_bought):
     while True:
         mouse_pos = pygame.mouse.get_pos()
         
-        menu_button = pygame.Rect(250, 470, 150, 50)
-        exit_button = pygame.Rect(400, 470, 150, 50)
+        menu_button = pygame.Rect(240, 470, 150, 50)
+        exit_button = pygame.Rect(410, 470, 150, 50)
         menu_hover = menu_button.collidepoint(mouse_pos)
         exit_hover = exit_button.collidepoint(mouse_pos)
         
@@ -93,13 +93,13 @@ def show_result(result_type, message, budget, items_bought):
             ]
             pygame.draw.polygon(screen, DARK_PINK, heart_points)
         
-        menu_color = LIGHT_RED if menu_hover else LIGHT_PINK
+        menu_color = LIGHT_PINK if menu_hover else WHITE
         pygame.draw.rect(screen, menu_color, menu_button, border_radius=10)
         pygame.draw.rect(screen, RED, menu_button, 3, border_radius=10)
         menu_text = font_medium.render("Menu", True, RED)
         screen.blit(menu_text, menu_text.get_rect(center=menu_button.center))
         
-        exit_color = LIGHT_RED if exit_hover else LIGHT_PINK
+        exit_color = LIGHT_PINK if exit_hover else WHITE
         pygame.draw.rect(screen, exit_color, exit_button, border_radius=10)
         pygame.draw.rect(screen, RED, exit_button, 3, border_radius=10)
         exit_text = font_medium.render("Exit", True, RED)
